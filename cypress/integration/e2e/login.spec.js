@@ -16,12 +16,14 @@ describe('this is the first scenario implemented with Framework',()=>{
             const invalidpass=user.Invalid_password
             LoginPage.logInfo(invalidname)
             LoginPage.logInfo(invalidpass)
-            LoginPage.login(invalidname,invalidpass)        
+            LoginPage.login(invalidname,invalidpass)  
+                
         })       
     })
 
     it('should display Error message',()=>{
         LoginPage.verifyErrorMessage()
+        cy.matchImageSnapshot('ErrorMessage');
         LoginPage.pause(3000)
     })
 

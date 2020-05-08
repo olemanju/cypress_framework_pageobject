@@ -1,6 +1,7 @@
 import BasePage from "../BasePage";
 
 const ERROR_MSG='.alert-error'
+const FORGET_PASSWORD_LINK='Forgot your password ?'
 
 export default class LoginPage extends BasePage{
     static login(username,password){
@@ -19,6 +20,10 @@ export default class LoginPage extends BasePage{
     static getTheErrorMessage(){
         const na=cy.get(ERROR_MSG).invoke('text')
         
+    }
+    static clickOnForgetPassword()
+    {
+        cy.contains(FORGET_PASSWORD_LINK).should('exist').click()
     }
 
 }

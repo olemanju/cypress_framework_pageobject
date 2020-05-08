@@ -4,11 +4,9 @@
   "description": "Cypress Automation framework",
   "main": "index.js",
   "scripts": {
-    "cy:open":"cypress open",
-    "cy:run":"cypress run",
-    "cy:run-dashboard":"cypress run --record --key 8dbf5e60-17dc-44b5-9631-830e03d7074f"
-    
-
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run-dashboard": "cypress run --record --key 8dbf5e60-17dc-44b5-9631-830e03d7074f"
   },
   "keywords": [
     "testing",
@@ -20,6 +18,8 @@
   "license": "ISC",
   "dependencies": {
     "cypress": "^4.5.0",
+    "cypress-image-snapshot": "^3.1.1",
+    "cypress-xpath": "^1.4.0",
     "prettier": "^2.0.5"
   }
 }
